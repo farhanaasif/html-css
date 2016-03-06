@@ -1,0 +1,326 @@
+<!doctype html>
+<!--
+  last modified: 01.03.2016  by Farhana Asif
+  author: Farhana Asif
+  email: farhana.asif@gmail.com
+  Description: Assignment #2 demonstrating my understanding of html5 tags.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Places I loved visiting</title>
+    <meta name="description" content="COMP1950 Homepage Farhana Asif">
+    <meta name="author" content="Farhana Asif">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.1">
+    <!--
+    * Enable HTML5 scripting for older versions of IE.
+    * New markups should only appear to users viewing the page with IE prior to version 9:
+    -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+<!--
+Two New HTML tags I explored  and used on this page.
+- - - - - - - - - - - - - -
+#1   <details> TAG
+- - - - - - - - - - - - - -
+Semantics: <details>
+              <summary>text</summary>
+          </details>
+
+Description: This tag defines additional details that the user can view or hide in the page view. It creates accordion-like widget that the we can toggle open and closed. Both starting and ending tag are mandatory. Inside , we can put any sort of content we want. <summary> is optional child element of this tag. It is possible to nest this tag.
+
+Example:
+     <details>
+        <summary>show/hide</summary>
+        <p>
+          Some text
+        </p>
+      </details>
+
+Browser support: only Chrome supports <details> tag.
+
+Attributes:
+  It uses open attribute. By default view is hidden, open attributes can be uses to
+  keep it visible.
+  e.g.
+     <details open>
+        <summary>show/hide</summary>
+        <p>
+          Some text
+        </p>
+      </details>
+
+Notes:
+  * Html validator gives a warning message for this tag:
+  [Warning Message: The details element is not supported properly by browsers yet. ]
+
+  * Although <summary> is said option, when I tried validating page without I got error that a required element is missing..
+  [Error message]  Element details is missing a required instance of child element summary.]
+
+Where I used it: I used it to display my food blog link in the footer.
+
+- - - - - - - - - - - - - -
+#2  <mark> TAG
+- - - - - - - - - - - - - -
+Semantics: <mark>some text</mark>
+
+Description:
+  The HTML <Mark> represents highlighted text. It can be used in a page showing search results to highlight every instance of the searched-for word. Both starting and ending tag are mandatory.
+
+Attributes:
+  It only uses global attributes.
+
+Example:
+    <p>This tag is used to <mark>highlight</mark> any text. </p>
+
+Browser support:
+  Supported by Chrome, FF 4.0, IE 9.0, Opera 11.0, Safari
+Notes:
+
+
+Where I used it: I used it to high light assignment 2 in the nav.
+-->
+
+
+  <body>
+    <!-- Site header with profile picture -->
+    <header>
+      <div class="profile-picture">
+        <img src="images/profile-picture-farhana.jpg" alt="Profile pictures"/>
+      </div>
+      <div class="clear"></div>
+      <h1>Farhana Asif</h1>
+      <h2>Places I loved Visiting</h2>
+    </header>
+
+    <!-- Left site navigation for assignments -->
+    <nav>
+      <h2>Assignments and Projects</h2>
+       <ul class="nav-listing">
+        <li class="nav-listing"><a href="index.html">Assignment 1</a></li>
+        <li class="nav-listing"><a href="favorite-places.html"><mark>Assignment 2</mark></a></li>
+        <li class="nav-listing"><a href="#">Assignment 3</a></li>
+        <li class="nav-listing"><a href="#">Assignment 4</a></li>
+        <li class="nav-listing"><a href="#">Assignment 5</a></li>
+       </ul>
+    </nav>
+
+    <!-- profile section of the page -->
+    <main>
+      <h1>My Favorite Places</h1>
+      <div>
+        <p>I have visited a quite a few countries in the world like Pakistan, Dubai, Germany, Italy, Spain, Sweden, Denmark, Belgium, and USA. All countries are unique in culture, people, food, and environment. I enjoyed visiting all those countries but I love Germany and Pakistan the most because both countries have a lot of historical place and I love visiting historical places. I will share a few places I enjoyed visiting in those countries the most.
+        </p>
+      </div>
+
+      <div id="fav-place-listing">
+        <section id="lahore-pakistan">
+          <div id="intro-pakistan">
+            <h2>Lahore, Pakistan</h2>
+            <p>Pakistan is my native country and my first home. Lahore is one of the biggest cities of Pakistan. Lahore is world famous for it's historical buildings, food, rich culture, colorful events, parks. It's city of love and hope for people in Pakistan.
+            </p>
+            <p>Many people like Lahore for a variety of reasons. I love it for it's heritage, culture, and food. This city does not sleeps. Shops and food courts remain open at night. People visit here to enjoy best food in the world and see historical heritage.
+            </p>
+          </div>
+          <div class="clear"></div>
+          <section id="lahore-attractions">
+            <div>
+              <h2>Favorite Historical Buildings</h2>
+              <p>There are a number of historical monuments there in Lahore and some of them were build in 1630s.
+              </p>
+              <p>Whenever I go there, I feel the aura of the rich culture this heritage. This heritage includes its way of life, its people, its poets, its artists and its streets. Government is not able to preserve it's historical buildings.
+              </p>
+              <p>Some of my favorite are:</p>
+            </div>
+            <!-- Lahore Fort-->
+            <div class="fav-place-img">
+              <a target="_blank" href="images/places/lahore/lahore-fort.jpg">
+                <figure>
+                  <img src="images/places/lahore/lahore-fort.jpg" alt="Lahore Fort">
+                </figure>
+              </a>
+              <div class="desc">
+                <strong>Royal Fort (1556-1605)</strong><br />
+                <small>Royal Fort or Shahi Qila is one of the magnificent buildings and landmarks Mughal emperors, covers an area of 20 hectares. Most famous attraction of all times.</small><br />
+                <small>Image src: http://food.ndtv.com/</small>
+              </div>
+            </div>
+
+            <!-- anarkali-tomb -->
+            <div class="fav-place-img">
+              <a target="_blank" href="images/places/lahore/anarkali-tomb.jpg">
+                <figure>
+                  <img src="images/places/lahore/anarkali-tomb.jpg" alt="Anarkali Tomb" width="300" height="200">
+                </figure>
+              </a>
+              <div class="desc">
+                <strong>Anarkali Tomb (1615) </strong><br />
+                <small>This tomb belongs to Nadira Begum, the lover of Prince Salim (the later Emperor Jahangir).  She was accused of having an illicit love affair with Prince Salim.</small>
+                <small>Image src: http://www.pinterest.com/</small>
+              </div>
+            </div>
+
+            <!-- royal mosque -->
+            <div class="fav-place-img">
+              <a target="_blank" href="images/places/lahore/royal-mosque.jpg">
+                <figure>
+                  <img src="images/places/lahore/royal-mosque.jpg" alt="Royal Mosque" width="300" height="200">
+                </figure>
+              </a>
+              <div class="desc">
+                <strong>Royal Mosque (1673)</strong><br />
+                <small>Built by an Emperor, second largest mosque in Pakistan. Interior of the mosque is decorated with white marble floor while exterior is decorated with stone carvings.</small>
+                <small>Image src: mojotravel.wordpress.com/</small>
+              </div>
+            </div>
+          </section>
+
+          <div class="clear"></div>
+
+          <section id="lahore-food">
+            <div>
+              <h2>Food</h2>
+              <p>What one does when he is happy? They go for best food and drinks! People from all over the world come is here for enjoy the World's best food at Food Street in Gawalmandi. Food street is surrounded by centuries-old buildings and places. Some of the famous dishes include Biryani, Haleem, Seekh Kabab, Peshawari Chappal Kababs, and Lahore Fish. It is impossible to find same taste of food any where else.
+              </p>
+            </div>
+            <!-- Food Steet -->
+            <div class="fav-place-img">
+              <a target="_blank" href="images/places/lahore/food-street.jpg">
+                <figure>
+                  <img src="images/places/lahore/food-street.jpg" alt="Food Street Lahore">
+                </figure>
+              </a>
+              <div class="desc">
+                <strong>Food Street Lahore</strong><br />
+                <small>Image src: friendskorner.com</small>
+              </div>
+            </div>
+
+            <!-- Biryani -->
+            <div class="fav-place-img">
+              <a target="_blank" href="images/places/lahore/biryani.jpg">
+                <figure>
+                  <img src="images/places/lahore/biryani.jpg" alt="Biryani">
+                </figure>
+              </a>
+              <div class="desc">
+                <strong>Biryani</strong><br />
+                <small>Image src: http://food.ndtv.com/</small>
+              </div>
+            </div>
+
+            <!-- Seekh Kabab -->
+            <div class="fav-place-img">
+              <a target="_blank" href="images/places/lahore/seekh-kebab.jpg">
+                <figure>
+                  <img src="images/places/lahore/seekh-kebab.jpg" alt="Seekh Kabab">
+                </figure>
+              </a>
+              <div class="desc">
+                <strong>Seekh Kabab</strong><br />
+                <small>Image src: http://food.ndtv.com/</small>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <div class="clear"></div>
+
+        <section id="frankfurt-germany">
+          <div id="intro-germany">
+            <h2>Frankfurt, Germany</h2>
+            <p>I visited Germany twice in the past two years to meet my family over in Frankfurt. I am so in love with that country because people are friendly and so much to see. I am so attracted the historical building specially churches. </p>
+          </div>
+          <section id="frankfurt-attraction">
+            <div>
+              <h2>Favorite Historical Buildings</h2>
+              <p>Germany is house of elegant historical churches and forts. Government takes a very good care of those historical treasures.</p>
+              <p>Some of my favorite ones are:</p>
+            </div>
+            <div class="fav-place-img">
+              <a target="_blank" href="images/places/germany/romerberg-old-town.jpg">
+                <figure>
+                  <img src="images/places/germany/romerberg-old-town.jpg" alt="Romerberg">
+                </figure>
+              </a>
+              <div class="desc">
+                <strong>The Römerberg</strong><br />
+                <small>Frankfurt's Old Town is an interesting architecture and heart of Frankfurt. Collection of 15th to 18th century houses</small><br/>
+                <small>Image src: http://www.planetware.com//</small>
+              </div>
+            </div>
+            <div class="fav-place-img">
+              <a target="_blank" href="images/places/germany/goethe-museum.jpg">
+                <img src="images/places/germany/goethe-museum.jpg" alt="The Römerberg" >
+              </a>
+              <div class="desc">
+                <strong>Goethe Museum</strong><br />
+                <small>It is a beautiful 14-room gallery showcasing artworks of famous German writer Johann Wolfgang von Goethe.</small><br/>
+                <small>Image src: http://www.goethehaus-frankfurt.de/</small>
+              </div>
+            </div>
+            <div class="fav-place-img">
+              <a target="_blank" href="images/places/germany/zoo-frankfurt.jpg">
+                <figure>
+                  <img src="images/places/germany/zoo-frankfurt.jpg" alt="Goethe Museum" >
+                </figure>
+              </a>
+              <div class="desc">
+                <strong>Zoo Frankfurt</strong><br />
+                <small>It's Germany's second oldest zoo was founded in 1858. House of thousands of animals from a variety of climates and regions.
+                </small><br/>
+                <small>Image src: http://www.zoo-frankfurt.de/</small>
+              </div>
+            </div>
+          </section>
+          <div class="clear"></div>
+          <section id="frankfurt-food">
+            <div>
+                <h2>Food</h2>
+                <p>I am not a huge fan of German food, there much really I liked. However, I loved German pizzas, donairs, potato salads.</p>
+            </div>
+            <div class="fav-place-img">
+                <a target="_blank" href="images/places/germany/potatoes.jpg">
+                  <figure>
+                    <img src="images/places/germany/potatoes.jpg" alt="Potatoes salad" >
+                  </figure>
+                </a>
+                <div class="desc">
+                  <strong>Potato Salad</strong><br />
+                  <small>Image src: www.pinterest.com/</small>
+                </div>
+              </div>
+              <div class="fav-place-img">
+                <a target="_blank" href="images/places/germany/german-pizza.jpg">
+                  <figure>
+                    <img src="images/places/germany/german-pizza.jpg" alt="German pizza">
+                  </figure>
+                </a>
+                <div class="desc">
+                  <strong>Think Crust Tuna Pizza</strong><br />
+                  <small>Image src: http://www.chameleonjohn.com/</small>
+                </div>
+              </div>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      Developed by: Farhana Asif
+    <!-- Link of my food blog -->
+      <details>
+        <summary>visit my food blog</summary>
+        <p>
+          If you love cooking visit my <a href="http://reinvent-food.blogspot.ca/" target="_blank">food blog</a>
+        </p>
+      </details>
+
+    </footer>
+
+  </body>
+</html>
