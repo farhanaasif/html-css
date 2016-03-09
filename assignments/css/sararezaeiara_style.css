@@ -1,0 +1,239 @@
+/* --------------------------------------------------------
+Second Style Sheet for Farhana's web page
+Date: 05.03.2016  by Sara Rezaeiara
+author: Sara Rezaeiara
+
+----------------------------------------------------------*/
+
+body{
+  font-family: "times new roman",sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  background-color:#E0D1DB;
+}
+
+h1{
+  font-size: 24px;
+  color: #4d4d4d;
+}
+
+h2{
+  font-size: 18px;
+  color: #3F2236;
+}
+
+figure
+{
+  margin:0;
+}
+
+section>h2{
+	text-decoration: underline;
+}
+
+img[alt]{
+	border:2px solid #3F2236;
+}
+
+
+/* Header of the website */
+
+header {
+  text-align:center;
+  margin:0 0 15px;
+  border-bottom: 1px solid #;
+}
+
+header > div.profile-picture {
+  height: 170px;
+  background-image:url("../images/header-image.jpg");
+  background-repeat:no-repeat;
+  background-position:left;
+  background-color:white;
+  
+}
+
+header > div.profile-picture img {
+  border-radius: 10%;
+  border: 4px solid #3F2236;
+}
+
+header > h1 {
+  font-size: 40px;
+   font-style:italic;
+  color: #2C2038;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+header > h2 {
+  font-size: 22px;
+  font-style:italic;
+  letter-spacing: 0.5px;
+  margin: 0px;
+  color: #564F77;
+}
+
+/* Main container of the page to hold contents */
+
+main {
+  color: #444444;
+  width:60%;
+  float:left;
+  padding:10px;
+}
+
+/* Blank div to clear all floatings */
+div.clear {
+  clear:both;
+  height: 25px;
+}
+
+/* Left site navigation for assignments */
+nav {
+    line-height:30px;
+    width: 30%;
+    float: left;
+    padding: 5px;
+}
+
+aside.blog{
+}
+
+a:link {
+  color: #0081d6;
+  text-decoration: none;
+}
+
+ul.nav-listing {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.nav-listing {
+  border-bottom: 1px solid #142F54;
+}
+
+/* no border under the last element of nav */
+li.nav-listing:last-child {
+  border: none;
+}
+
+/* hover effect on the link */
+li.nav-listing a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  width: 100%; /* should cover the whole div */
+  transition: font-size 0.0s ease, background-color 0.0s ease;
+}
+
+li.nav-listing a:hover {
+  background: #B598AD;
+  color:#453B13;
+  font-size:18px;
+}
+
+/*section {
+    width:50%;
+    float:left;
+    padding:10px;
+}*/
+
+#site-listing, #tools-listing {
+  margin-top: 20px;
+}
+
+/* child elements of tools-listing div */
+#tools-listing > ul {
+    list-style: none;
+}
+
+#tools-listing li {
+    float: left;
+    width: 100px;
+    height: 140px;
+    margin: 0 20px 20px;
+}
+
+#tools-listing p {
+  text-align: center;
+  color: #403D4F;
+  font-weight: 900;
+  font-size:14px;
+  
+}
+
+#tools-listing p:hover {
+  color: #8E6C31;
+  text-decoration: none;
+ text-decoration:underline;
+}
+
+
+#tools-listing p:visited {
+  color: #66141C;
+  text-decoration: none;
+}
+
+#tools-listing a:link {
+  color: #444444;
+  text-decoration: none;
+}
+
+
+
+/* hover effect on image hover */
+
+#tools-listing img:hover {
+  margin: 2px;
+  border-bottom: 4px solid #815200;
+   border-right: 4px solid #815200;
+  box-shadow: 0px 0px 1px rgba(255,255,255,0.9);
+}
+
+/* child elements of tools-listing div */
+#site-listing > ol {
+    display: block;
+    margin-top: 10px;
+}
+
+#site-listing li {
+    border-bottom: 1px solid #130C32;
+    margin-bottom: 6px;
+    padding: 4px 0px 8px;
+    clear: both;
+    width: 100%;
+}
+
+
+#site-listing a:link {
+    color:#4F173E;
+}
+#site-listing a:hover {
+    color:#35440A;
+	font-weight:bold;
+text-decoration:underline;
+}
+
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    color: #e67300;
+}
+
+div.desc > small{
+  color: #000000;
+}
+
+/* site footer */
+footer {
+    background-color: #808080;
+    color: #3F2236;
+    clear: both;
+    text-align: center;
+    padding: 5px;
+	
+}
