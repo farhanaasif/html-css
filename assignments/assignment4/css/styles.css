@@ -7,7 +7,7 @@ author: Farhana Asif
 email: farhana.asif@gmail.com
 ----------------------------------------------------------*/
 
-/*  Import font  TODO */
+/*  Import font  */
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Arvo:700");
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -77,22 +77,28 @@ body{
 
   #body-wrapper{
     padding-bottom: 1px;
+    width: 100%;
   }
 
   #header-wrapper {
     padding: 0 15px 0 15px;
-    position: relative;
     background: #fff;
     text-align: center;
+    width: 100%;
+    display:block;
+    overflow:auto;
+    margin-bottom:20px;
   }
 
   #contents-wrapper {
-    position: relative;
-    overflow: hidden;
+    /* position: relative; */
+    /* overflow: hidden; */
     background: #fff;
     padding: 3em 0 3em 0;
     text-align: center;
     background-color: #f0f5f5;
+    width: 100%;
+
   }
 
   #footer-wrapper{
@@ -105,61 +111,63 @@ body{
 
 /* Header */
 
-  #header {
-    position: relative;
+  header {
     border-bottom: solid 2px #e5e5e5;
     box-shadow: inset 0px -9px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
-    padding: 10em 0 7em 0;
+    padding: 10em 0 4em 0;
   }
 
-    #header h1 {
+    header h1 {
       font-size: 3em;
       font-weight: 600;
-      letter-spacing: 14px;
+      letter-spacing: .2em;
       color: #ed786a;
       text-shadow: 0.05em 0.060em 0 rgba(0, 0, 0, 0.2);
       font-family: 'Arvo';
+      /* display: block; */
     }
 
-      #header h1 a {
+      header h1 a {
         border: 0;
         text-decoration:none;
         text-transform: uppercase;
       }
 
-    #header p {
+    header p {
       text-transform: uppercase;
       font-weight: 400;
       color: #888;
       margin: 2.5em 0 0 0;
       font-size: 0.85em;
       letter-spacing: 3px;
+      /* display: block; */
     }
 
   /* Nav */
 
-    #nav {
+    nav {
       position: absolute;
       top: 3em;
       left: 0;
-      width: 100%;
+      width: 98%;
       cursor: default;
+      margin-left: 1em;
     }
-     #nav > ul{
+     nav > ul{
       float:left;
-      width: 80%;
+      width: 75%;
      }
 
-      #nav > ul > li {
+      nav > ul > li {
         display: inline-block;
         padding-right: 2em;
       }
 
-      #nav > ul > li:last-child {
+      nav > ul > li:last-child {
         padding-right: 0;
       }
 
-      #nav > ul > li > a {
+      nav > ul > li > a {
         display: block;
         text-decoration: none;
         text-transform: uppercase;
@@ -167,7 +175,7 @@ body{
         outline: 0;
       }
 
-        #nav > ul > li > a > span {
+        nav > ul > li > a > span {
           font-size: 0.85em;
           letter-spacing: 3px;
         }
@@ -175,19 +183,25 @@ body{
 /* social media sprits */
 
   #social-media{
-   width: 20%;
+   width: 21%;
    float:right;
+   padding-right: 40px;
+   display: block;
+   overflow: hidden;
   }
 
-#social-media a{
-    display: inline-block;
-    width: 46px;
-    height: 45px;
-    margin-left: 10px;
-    text-decoration: none;
-    border: none;
-}
+  #social-media a{
+      display: inline-block;
+      width: 46px;
+      height: 45px;
+      margin-left: 10px;
+      text-decoration: none;
+      border: none;
+  }
 
+#social-media a:last-child{
+ margin-right: 1em;
+}
 /* image sprites */
 
   #social-media a.facebook{
@@ -259,17 +273,16 @@ body{
 /* Contents */
 
   section {
-    margin-bottom: 3em;
+    width: 100%;
   }
 
   #contents-wrapper p {
-    text-align: center;
+    text-align: justify;
   }
 
   .feature {
     width: 33.3333333333%;
     clear: none;
-    margin-left: 0;
     display: block;
   }
 
@@ -296,7 +309,6 @@ body{
   }
 
   #contents-wrapper .details {
-    margin-top: 1.25em;
   }
 
 /* Containers */
@@ -304,19 +316,18 @@ body{
   .container {
     margin-left: auto;
     margin-right: auto;
-    width: 1200px;
+    width: 100%;
   }
 
   .row {
     border-bottom: solid 1px transparent;
     box-sizing: border-box;
-    margin: -50px 0 -1px -50px;
   }
 
   .row > * {
     float: left;
     box-sizing: border-box;
-    padding: 50px 0 0 50px;
+    padding: 0px 10px 0 0px;
   }
 
   .details {
@@ -328,6 +339,61 @@ body{
     text-align: left !important;
   }
 
+  .actions {
+    margin-top: 40px;
+   padding: 20px 20px 0 20px;
+   border-top: solid 1px #777;
+  }
+
 div.clear {
     clear: both;
   }
+
+/*
+---------------------------------------------------------
+2 - media query rules for thin clients
+*/
+@media only screen and (min-width:100px) and (max-width:800px){
+  #fullscreen{    display:none; }
+  #thin{        display:block;  }
+
+  #container, nav ul, section, aside, footer{
+    width:auto;
+    font-size:.90em;
+  }
+
+  #social-media{
+   width: 100%;
+   clear: both;
+   margin-bottom: 10px;
+  }
+
+  header{
+    padding: 1em 0 1em 0;
+    display: block;
+  }
+  header h1{
+    font-size: 2em;
+  }
+  header p{
+    margin: 1em 0 9em 0;
+  }
+  nav{
+    top: 6em;
+    display: block;
+  }
+  nav ul{
+      width:100%;
+    }
+
+  .feature {
+    width: 100%;
+    clear: both;
+    display: block;
+  }
+
+  section{
+    margin: 0 1em 0 1em;
+  }
+}
+
