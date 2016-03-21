@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<!--
+  last modified: 26.02.2016  by Farhana Asif
+  author: Farhana Asif
+  email: farhana.asif@gmail.com
+  Description: Assignment # 6 of the Comp1950.
+-->
+<html>
+  <head>
+    <title>Assignment # 6 JQuery Techniques</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+    <!-- load the required jQUery library -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!--  datatable library -->
+    <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"> </script>
+    <!-- load datatable stylesheet -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css" />
+    <!-- local style sheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <!-- Header -->
+      <div id="header">
+        <header>
+          <span class="image header-image"><img src="../images/profile-picture-farhana.jpg" alt="" /></span>
+          <h1 id="logo"><a href="#">Farhana Asif</a></h1>
+          <p>Favorite JQuery Plugin</p>
+        </header>
+        <nav id="nav">
+          <ul>
+            <li><a href="#about"> DataTables JQuery Plug-in</a></li>
+            <li><a href="#reasons">Demo</a></li>
+            <li><a href="#customization">Customization</a></li>
+            <li><a href="#resourses">Techniques and Resources used</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    <!-- Contents Wrapper -->
+      <div id="contents-wrapper">
+
+        <!-- Main -->
+          <div id="main">
+            <!-- about -->
+              <section id="about">
+                <div class="container">
+                  <header class="major">
+                    <h2>Assignment # 6</h2>
+                    <p>DataTables Plug-in</p>
+                    <p><a href="http://www.datatables.net/">DataTables</a> is a free open source, highly flexible, and light weight plug-in for the jQuery Javascript library. It's zero-configuration implementation makes it distinct from other plug-ins. Works effectively for static and dynamic dataset.</p>
+
+                    <p>It's main features include but not limited to:</p>
+                    <h3>Features highlights: </h3>
+                    <ul class="reasons-list">
+                      <li>Pagination</li>
+                      <li>Multi-column sorting</li>
+                      <li>Sorting filtering</li>
+                      <li>Instant search</li>
+                      <li>Easy to theme with jquery UI, Bootstrap</li>
+                      <li>Professional looking default theme</li>
+                      <li>Ajax auto loading of data</li>
+                      <li>Highlights Sorting column(s)</li>
+                      <li>Scrolling options for table viewport</li>
+                      <li>Smart handling of column widths</li>
+                      <li>Provides a <a href="http://www.datatables.net/examples/styling/">list</a> of beautiful and professional styles</li>
+                      <li>Has a <a href="http://www.datatables.net/manual/styling/theme-creator">style creator</a> for customization</li>
+                    </ul>
+                  </header>
+                </div>
+              </section>
+
+            <!-- reasons -->
+              <section id="reasons">
+                <div class="container">
+                  <h2>Demo</h2>
+                  <p>This requires only one javascript file and and a small javascript to enable style on the table. No css style is needed on table headers or rows. Quick and <a href="http://www.datatables.net/examples/basic_init/zero_configuration.html">simple steps</a> for this implementation.</p>
+                  <p>I used sample static data for this demo. Search, sort, pagination, and filtering works beautifully. Here is screen shot of data table before any customization.</p>
+                  <h5>Download Datatable:</h5>
+                  <p>Datatable plug in can be <a href="http://www.datatables.net/download/index">download</a> from plugin website or can be imported using cdn links.</p>
+                  <p>Download link: <a href="http://www.datatables.net/download/index">http://www.datatables.net/download/index</a></p>
+
+                  <h5>Before Customization</h5>
+                  <p>Here is screenshot of datatable implemented using zero-integration step.</p>
+                  <img src="images/datatble-before.jpg" alt="Datatable">
+                  <br/><br/>
+                  <h5>After Customization</h5>
+                  <table id="example2" class="display" >
+
+                    <thead>
+                      <tr>
+                        <th>Team</th>
+                        <th>Yards</th>
+                        <th>Rush</th>
+                        <th>Pass</th>
+                      </tr>
+                    </thead>
+                    <tr>
+                      <th>Montreal Alouettes</th>
+                      <td>7,170</td>
+                      <td>2,342</td>
+                      <td>5,242</td>
+                    </tr>
+                    <tr>
+                      <th>Winnipeg Blue Bombers</th>
+                      <td>6,993</td>
+                      <td>1,850</td>
+                      <td>5,544</td>
+                    </tr>
+                    <tr>
+                      <th>Calgary Stampeders</th>
+                      <td>6,291</td>
+                      <td>1,930</td>
+                      <td>4,766</td>
+                    </tr>
+                    <tr>
+                      <th>Edmonton Eskimos</th>
+                      <td>6,237</td>
+                      <td>2,061</td>
+                      <td >4,648</td>
+                    </tr>
+                    <tr>
+                      <th>B.C. Lions</th>
+                      <td>6,230</td>
+                      <td>2,183</td>
+                      <td>4,357</td>
+                    </tr>
+                    <tr>
+                      <th>Hamilton Tiger-Cats</th>
+                      <td>6,139</td>
+                      <td>1,558</td>
+                      <td >4,807</td>
+                    </tr>
+                    <tr>
+                      <th>Saskatchewan Roughriders</th>
+                      <td>5,701</td>
+                      <td>2,518</td>
+                      <td>3,600</td>
+                    </tr>
+                    <tr>
+                      <th>Ottawa Renegades</th>
+                      <td>5,100</td>
+                      <td>1,488</td>
+                      <td>3,933</td>
+                    </tr>
+                    <tr>
+                      <th>Toronto Argonauts</th>
+                      <td>4,436</td>
+                      <td>1,664</td>
+                      <td>3,162</td>
+                    </tr>
+                    <tr>
+                      <th>Lorem ipsum</th>
+                      <td>5,436</td>
+                      <td>1,614</td>
+                      <td>2,162</td>
+                    </tr>
+                    <tr>
+                      <th>Aenean ac</th>
+                      <td>2,436</td>
+                      <td>1,114</td>
+                      <td>1,112</td>
+                    </tr>
+                  </table>
+
+                </div>
+              </section>
+
+            <!-- customization -->
+              <section id="customization">
+                <div class="container">
+                  <h3>Customization</h3>
+                  <p>I tried customizing zero configuration setup of Datatable plug-in without using custom style builder of this example.</p>
+                  <ul class="reasons-list">
+                    <li>Updated background color of header row</li>
+                    <li>Rows background color to match the theme</li>
+                    <li>Updated color scheme of previous and next button to match the scheme</li>
+                    <li>Also tried using no pagination option using javascript. Currently commented in the javascript at the end of this document.</li>
+                  </ul>
+                </div>
+              </section><!-- customization -->
+
+            <!-- resourses -->
+              <section id="resourses">
+                <div class="container">
+                  <h3>Resources and Techniques Used</h3>
+                  <p>I used plug-in website as main resource to understand this plug-in and utilized zero configuration setup of Datatable plug-in. After I got basic implementation working, I used different themes and related css files to understand advance implementation and styling.</p>
+                  <h5>Resources:</h5>
+                  <ol>
+                    <li>Jquery: <em> <a href="http://code.jquery.com/jquery-1.11.0.min.js"> http://code.jquery.com/jquery-1.11.0.min.js</a></em></li>
+                    <li> Datatable Plug-in website: <em> <a href="http://www.datatables.net/"> http://www.datatables.net/</a></em></li>
+                    <li>Datatable Stylesheet: <a href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"> https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css</a></li>
+                    <li>Theme creator: <em> <a href="http://www.datatables.net/manual/styling/theme-creator">http://www.datatables.net/manual/styling/theme-creator</a></em></li>
+                    <li>CFL Data Source: <a href="http://www.statcan.gc.ca/edu/power-pouvoir/ch1/examples-exemples/5214854-eng.htm">http://www.statcan.gc.ca/edu/power-pouvoir/ch1/examples-exemples/5214854-eng.htm</a> </li>
+                  </ol>
+                </div> <!-- container -->
+              </section> <!-- resources -->
+          </div> <!-- main -->
+
+        <!-- Footer -->
+          <div id="footer">
+            <div class="container">
+              <p class="copyright">
+                <span>&copy; 2016. All rights reserved. Developed as class assignment for
+                  <a href="http://www.bcit.ca/study/courses/comp1950">BCIT COMP 1950</a>
+                </span>
+                <span>Developed By: <a href="http://bcitcomp.ca/students/fasif/">Farhana Asif</a></span>
+              </p>
+            </div>
+          </div> <!-- footer -->
+      </div>
+  <script>
+    $(document).ready(function() {
+        $('#example2').DataTable({
+            // Enable comment below to remove pagination
+            // paging: false
+        });
+    } );
+  </script>
+  </body>
+</html>
